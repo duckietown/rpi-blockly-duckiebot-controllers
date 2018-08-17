@@ -9,8 +9,7 @@ RUN git clone -b afdaniele-blockly --depth 1 https://github.com/duckietown/Softw
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && catkin_make -C /home/software/catkin_ws -DCATKIN_WHITELIST_PACKAGES="blockly_controller"
 
 # setup entrypoint
-COPY assets/blockly_controllers.launch /root/blockly_controllers.launch
-COPY assets/entrypoint_controllers.sh /root/entrypoint_controllers.sh
+COPY assets/* /root/
 RUN chmod +x /root/entrypoint_controllers.sh
 
 # disable ARM
