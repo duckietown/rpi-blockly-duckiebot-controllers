@@ -1,9 +1,0 @@
-<launch>
-
-	<arg name="veh" value="$(env HOSTNAME)" doc="Name of vehicle. ex: megaman"/>
-
-	<include file="$(find blockly_controller)/launch/blockly_controller.launch">
-		<arg name="veh" value="$(arg veh)"/>
-	</include>
-
-</launch>
